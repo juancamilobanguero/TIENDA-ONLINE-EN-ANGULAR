@@ -1,0 +1,31 @@
+.categorias-populares {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+  
+  .categoria {
+    margin-bottom: 20px;
+  }
+  
+  .categoria h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  
+  .producto {
+    background-color: #e9dcdc;
+    padding: 10px;
+    border-radius: 5px;
+  }
+  
+  .producto img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+  }
+  
+  .producto p {
+    margin-top: 5px;
+  }
+  
