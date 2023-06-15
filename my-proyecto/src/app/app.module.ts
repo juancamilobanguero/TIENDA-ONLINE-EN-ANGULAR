@@ -15,6 +15,8 @@ import { LoginComponent } from './component/login/login.component';
 import { PromocionComponent } from './component/promocion/promocion.component';
 import { DescubreComponent } from './component/descubre/descubre.component';
 import { CategoriasComponent } from './component/categorias/categorias.component';
+import { GamersComponent } from './routes/gamers/gamers.component';
+import { GraficasComponent } from './routes/graficas/graficas.component';
 
 
 @NgModule({
@@ -32,6 +34,8 @@ import { CategoriasComponent } from './component/categorias/categorias.component
     PromocionComponent,
     DescubreComponent,
     CategoriasComponent,
+    GamersComponent,
+    GraficasComponent,
   ],
   imports: [
     BrowserModule,

@@ -42,13 +42,19 @@
   </div>
   <nav>
     <ul class="nav-links">
-      <li><a href="#">Pc gamers</a></li>
-      <li><a href="#">Tarjetas graficas</a></li>
-      <li><a href="#">Monitores</a></li>
-      <li><a href="#">Laptos</a></li>
-      <li><a href="#">Pc gamers</a></li>
+      <li>
+        <a [routerLink]="['/gamers']" routerLinkActive="active">
+
+        Pc gamers
+
+      </a>
+    </li>
+      <li><a >Tarjetas graficas</a></li>
+      <li><a >Monitores</a></li>
+      <li><a >Laptos</a></li>
+      <!-- <li><a >Pc gamers</a></li> -->
     </ul>
   </nav>
-  <a class="btn" href="#">Crear cuenta</a>
-  <a class="btn" href="#">Ingresa</a>
+  <a class="btn" >Crear cuenta</a>
+  <a class="btn" >Ingresa</a>
 </header>
