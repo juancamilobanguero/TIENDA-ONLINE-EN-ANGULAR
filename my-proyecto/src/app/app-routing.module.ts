@@ -1,14 +1,17 @@
-import { NgModule } from '@angular/core';
+import { Component, NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { GamersComponent } from './routes/gamers/gamers.component';
 import { GraficasComponent } from './routes/graficas/graficas.component';
 import { HomeComponent } from './component/home/home.component';
-
+import { MonitoresComponent } from './routes/monitores/monitores.component';
+import { LaptosComponent } from './routes/laptos/laptos.component';
 const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: '/home' },
   { path: 'home', component: HomeComponent },
   { path: 'gamers', component: GamersComponent },
   { path: 'graficas', component: GraficasComponent },
+  {path: 'monitores', component: MonitoresComponent},
+  {path: 'laptos', component: LaptosComponent}
 ];
 
 @NgModule({

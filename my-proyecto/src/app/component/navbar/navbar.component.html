@@ -49,10 +49,27 @@
 
       </a>
     </li>
-      <li><a >Tarjetas graficas</a></li>
-      <li><a >Monitores</a></li>
+      <li>
+        <li>
+          <a [routerLink]="['/graficas']" routerLinkActive="active">
+  
+          Pc gamers
+  
+        </a>
+      </li>
+      <li>
+        <a [routerLink]="['/monitores']" routerLinkActive="active">
+          
+          Monitores
+
+        </a>
+      </li>
       <li><a >Laptos</a></li>
-      <!-- <li><a >Pc gamers</a></li> -->
+       <li>
+        <a [routerLink]="['/laptos']" routerLinkActive="active">
+          Pc gamers
+        </a>
+      </li> 
     </ul>
   </nav>
   <a class="btn" >Crear cuenta</a>

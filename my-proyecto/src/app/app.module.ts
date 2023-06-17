@@ -17,6 +17,8 @@ import { DescubreComponent } from './component/descubre/descubre.component';
 import { CategoriasComponent } from './component/categorias/categorias.component';
 import { GamersComponent } from './routes/gamers/gamers.component';
 import { GraficasComponent } from './routes/graficas/graficas.component';
+import { MonitoresComponent } from './routes/monitores/monitores.component';
+import { LaptosComponent } from './routes/laptos/laptos.component';
 
 
 @NgModule({
@@ -36,6 +38,8 @@ import { GraficasComponent } from './routes/graficas/graficas.component';
     CategoriasComponent,
     GamersComponent,
     GraficasComponent,
+    MonitoresComponent,
+    LaptosComponent,
   ],
   imports: [
     BrowserModule,
