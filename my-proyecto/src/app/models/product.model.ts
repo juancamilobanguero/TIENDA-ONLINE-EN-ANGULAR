@@ -11,6 +11,7 @@ export class Product {
     image?: string;
     createdAt: any;
     updatedAt: any;
+  static value: any;
   
     constructor(
       sku = '',
