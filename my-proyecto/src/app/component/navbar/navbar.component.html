@@ -29,16 +29,16 @@
     </div>
   </nav> -->
 
-<div class="bg-dark d-flex justify-content-center">
+<div class="bg-dark d-flex justify-content-center ">
   <input type="text" placeholder="buscar" />
   <div class="btn">
     <i class="fa-solid fa-magnifying-glass"></i>
   </div>
 </div>
 
-<header class="header">
+<header class="header bg-dark ">
   <div class="logo">
-    <img src="" alt="" />
+    <img src="../../../assets/img/los-10-sonidos-principales-del-perro.jpg" alt="" width="70px" height="50px" />
   </div>
   <nav>
     <ul class="nav-links">
@@ -49,12 +49,29 @@
 
       </a>
     </li>
-      <li><a >Tarjetas graficas</a></li>
-      <li><a >Monitores</a></li>
-      <li><a >Laptos</a></li>
+      <li>
+        <a [routerLink]="['/graficas']" routerLinkActive="active">
+          Tarjetas graficas
+        </a>
+      </li>
+      <li>
+        <a [routerLink]="['/monitores']" routerLinkActive="active">
+          Monitores
+        </a>
+      </li>
+      <li>
+        <a [routerLink]="['/laptos']" routerLinkActive="active">
+          Laptos
+        </a>
+      </li>
       <!-- <li><a >Pc gamers</a></li> -->
     </ul>
   </nav>
-  <a class="btn" >Crear cuenta</a>
-  <a class="btn" >Ingresa</a>
+  <div class="d-flex gap-3 mb-3">
+    <a [routerLink]="['/crear']" routerLinkActive="active"
+    class="text-white text-decoration-none xse">
+    Crear cuenta
+  </a>
+    <a class="text-white text-decoration-none xse">Ingresa</a>
+  </div>
 </header>

@@ -17,6 +17,13 @@ import { DescubreComponent } from './component/descubre/descubre.component';
 import { CategoriasComponent } from './component/categorias/categorias.component';
 import { GamersComponent } from './routes/gamers/gamers.component';
 import { GraficasComponent } from './routes/graficas/graficas.component';
+import { MonitoresComponent } from './routes/monitores/monitores.component';
+import { LaptosComponent } from './routes/laptos/laptos.component';
+import { CartComponent } from './cart/cart.component';
+import { CrearComponent } from './routes/crear/crear.component';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
+
 
 
 @NgModule({
@@ -36,10 +43,16 @@ import { GraficasComponent } from './routes/graficas/graficas.component';
     CategoriasComponent,
     GamersComponent,
     GraficasComponent,
+    MonitoresComponent,
+    LaptosComponent,
+    CartComponent,
+    CrearComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

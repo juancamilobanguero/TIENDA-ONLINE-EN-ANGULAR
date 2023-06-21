@@ -1,0 +1,149 @@
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <form #userform="ngForm"(ngSubmit)="createOrUpdateUser(userform)">
+        <div class="d-flex flex-column gap-3">
+          <div class="d-flex justify-content-center">
+             <h1>sign up</h1>
+          </div>
+          <div class="d-flex flex-column flex-sm-row gap-3">
+            <input 
+            name="_id"
+            #_id="ngModel"
+            [(ngModel)]="userService.userToCreate._id"
+            type="text"
+            [(ngModel)]="userService.userToCreate.name"
+            type="text"
+            placeholder="Name"
+            />
+            <input 
+            name="lastName"
+            #lastname="ngModel"
+            [(ngModel)]="userService.userToCreate.lastName"
+            type="text"
+            placeholder="Last name"
+            />
+          </div>
+          <div class="d-flex gap-3 flex-column flex-md-row">
+            <input
+            class="icon"
+            name="username"
+            #username="ngModel"
+            [(ngModel)]="userService.userToCreate.username"
+            type="text"
+            placeholder=" Username"
+          />
+          <input
+          class="icon"
+          name="address"
+          #address="ngModel"
+          [(ngModel)]="userService.userToCreate.address"
+          type="text"
+          placeholder=" Username"
+        />
+        <input
+        class="icon"
+        name="email"
+        #email="ngModel"
+        [(ngModel)]="userService.userToCreate.email"
+        type="text"
+        placeholder=" Email"
+      />
+      <input
+      name="password"
+      #password="ngModel"
+      [(ngModel)]="userService.userToCreate.password"
+      type="password"
+      placeholder="Password"
+    />
+          </div>
+          <div class="d-flex gap-3 flex-column flex-md-row">
+            <div class="flex-grow-2">
+                <input
+                name="id"
+                #id="ngModel"
+                [(ngModel)]="userService.userToCreate.id"
+                type="text"
+                placeholder="Id"
+              />  
+            </div>
+            <div class="flex-grow-1">
+                <input
+                  name="dateBirth"
+                  #dateBirth="ngModel"
+                  [(ngModel)]="userService.userToCreate.dateBirth"
+                  type="date"
+                  placeholder="Date Birth"
+                />
+              </div>
+              <div class="flex-grow-1">
+                <input
+                  class="icon"
+                  name="phoneNumber"
+                  #phoneNumber="ngModel"
+                  [(ngModel)]="userService.userToCreate.phoneNumber"
+                  type="text"
+                  placeholder="Phone"
+                />
+              </div>   
+          </div>
+          <div class="d-flex flex-column flex-sm-row gap-3">
+            <select
+            class="form-select"
+            name="role"
+            #role="ngModel"
+            [(ngModel)]="userService.userToCreate.role"
+          >
+          <option selected>Role</option>
+              <option value="1">Administrador</option>
+              <option value="2">Subscriptor</option>
+              <option value="3">Cliente</option>
+            </select>
+            <select
+            class="form-select"
+            name="paymentMethods"
+            #paymentMethods="ngModel"
+            [(ngModel)]="userService.userToCreate.paymentMethods"
+          >
+          <option selected value="0" disabled> Payment Methods</option>
+          <option value="1">Credit Card</option>
+          <option value="2">Debit Card</option>
+          <option value="3">Transfer</option>
+        </select>
+        </div>
+        <button class="text-info rounded-5" type="submit">
+            <i class="fa-solid fa-paper-plane pe-1"></i> Send
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<div class="container mt-5">
+    <table class="table table-striped border">
+      <thead class="text-center">
+        <th class="p-3 bg-dark text-white">Usuario</th>
+        <th class="p-3 bg-dark text-white">Id</th>
+        <th class="p-3 bg-dark text-white">Documento</th>
+        <th class="p-3 bg-dark text-white">Nombre</th>
+        <th class="p-3 bg-dark text-white">Apellidos</th>
+        <th class="p-3 bg-dark text-white" colspan="2">Acciones</th>
+      </thead>
+      <tbody>
+        <tr *ngFor="let user of userService.allUsers">
+          <td>{{user.username}}</td>
+          <td>{{user._id}}</td>
+          <td>{{user.id}}</td>
+          <td>{{user.name}}</td>
+          <td>{{user.dateBirth}}</td>
+          <td>
+            <a class="btn btn-danger" (click)="deleteUser(user._id || '')" >Eliminar</a>
+          </td>
+          <td>
+            <a class="btn btn-warning" (click)="updateUser(user)">Editar</a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>

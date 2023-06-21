@@ -1,0 +1,12 @@
+<h2>Carritos de compras </h2>
+<div *ngIf="items.length > 0; else emptyCart">
+    <div *ngFor="let item of items">
+        <p>{{item.name}} - precio: ${{item.price}}</p>
+        <button (click)="removeFromcart(item)">Eliminar</button> 
+    </div>
+    <button (click)="clearCart()">Vaciar carrito</button>
+</div>
+
+<ng-template #emptyCart>
+    <p>El carrito está vacío.</p>
+  </ng-template>

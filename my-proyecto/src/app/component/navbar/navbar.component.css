@@ -8,7 +8,7 @@
 header{
     background-color: #163039;
     display: flex;
-justify-content: space-around;
+    gap: 100px;
     align-items: center;
     height: 88px;
     padding: 5px 7%;
@@ -34,7 +34,7 @@ justify-content: space-around;
 }
 .header .btn a{
     color: #adb0b0;
-    padding: 9px 25px;
+    padding: 0px 10px;
     background: #eceff1;
     transition: all 0.3s ease 0s;
     text-decoration: none;

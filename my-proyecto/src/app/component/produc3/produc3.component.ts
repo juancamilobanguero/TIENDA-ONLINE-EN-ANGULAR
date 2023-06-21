@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component,Input } from '@angular/core';
 
 @Component({
   selector: 'app-produc3',
@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./produc3.component.css']
 })
 export class Produc3Component {
+  @Input() produc3:any
 
+  addToCart (){
+   console.log('Producto agregado al carrito');
+  }
 }
