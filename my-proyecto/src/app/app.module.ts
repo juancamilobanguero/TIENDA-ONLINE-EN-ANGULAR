@@ -21,7 +21,7 @@ import { MonitoresComponent } from './routes/monitores/monitores.component';
 import { LaptosComponent } from './routes/laptos/laptos.component';
 import { CartComponent } from './cart/cart.component';
 import { CrearComponent } from './routes/crear/crear.component';
-import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 
 

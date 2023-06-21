@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { ProductService } from 'src/app/api/products/product.service';
 import { Product } from 'src/app/models/product.model';
+
 @Component({
   selector: 'app-monitores',
   templateUrl: './monitores.component.html',
@@ -57,4 +58,3 @@ export class MonitoresComponent {
    this.ProductService.productToCreate = product;
  }
 }
-

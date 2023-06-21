@@ -58,4 +58,3 @@ export class LaptosComponent {
    this.ProductService.productToCreate = product;
  }
 }
-
