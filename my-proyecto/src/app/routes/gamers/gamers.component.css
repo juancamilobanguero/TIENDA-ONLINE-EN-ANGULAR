@@ -69,7 +69,6 @@
     cursor: pointer;
   }
 .container{
-    display: flex;
     width: 1000px;
     height: 600px;
     background-color: whitesmoke;
@@ -123,3 +122,35 @@ h1 {
     border: 1px solid black;
   }
   
+
+
+  .container-lateral{
+    width: 1350px;
+    height: 1000px;
+    background-color: whitesmoke;
+    color: black;
+    font-family: 'Lobster', cursive;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    grid-gap: 20px;
+}
+
+
+
+.total-productos{
+    background-color: white;
+    width: 290px;
+    height: 70px;
+    margin-top: 30px;
+    margin-left: 5px; 
+   
+}
+
+
+.categorias{
+    background-color: white;
+    width: 290px;
+    height: 250px;
+    margin-top: 5px;
+    margin-left: 5px;
+}
