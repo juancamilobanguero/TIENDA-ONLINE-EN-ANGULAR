@@ -1,2 +1,133 @@
-
+body{
+    background-color: whitesmoke;
+  }
+  .ofertas a{
+    text-decoration: none;
+    color: rgb(140, 140, 140);
+  }
+  .camilo a{
+      text-decoration: none;
+      color: rgb(116, 116, 116);
+  }
+  /* .grafi{
+      width: 270px;
+      height: 30px;
+      border: 2rem solid #161616; 
+      margin: 10px;
+  } */
+  .contenedor{
+      max-width: 1100px;
+      padding: 10px;
+      margin: auto;
+      display: flex;
+      justify-content: space-between;
+      /* oculto lo que queda fuera del .contenedor */
+      contain: paint;
+   
+    }
+    .contenedor .contenedor-items{
+      margin-top: 30px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      grid-gap:30px;
+      grid-row-gap: 30px;
+      /* width: 60%; */
+      width: 100%;
+      transition: .3s;
+    }
+    .contenedor .contenedor-items .item{
+      max-width: 270px;
+      margin: auto;
+  
+      border-radius: 10px;
+      padding: 20px;
+      transition: .3s;
+      background-color: white;
+    }
+    .contenedor .contenedor-items .item .img-item{
+      width: 100%;
+    }
+    .contenedor .contenedor-items .item:hover{
+      box-shadow: 0 0 10px #666;
+      scale: 1.05;
+    }
+    .contenedor .contenedor-items .item .titulo-item{
+      display: block;
+      font-weight: bold;
+      text-align: center;
+      text-transform: uppercase;
+    }
+    .contenedor .contenedor-items .item .precio-item{
+      display: block;
+      text-align: center;
+      font-weight: bold;
+      font-size: 22px;
+    }
+    .contenedor .contenedor-items .item .boton-item{
+      display: block;
+      margin: 10px auto;
+      border: none;
+      background-color: black;
+      color: #fff;
+      padding: 5px 15px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  
+  
+  
+  .btn-compra{
+      display: inline-block;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: black;
+    border: none;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 5px;
+   
+  }
+  
+  .btn-compra:hover {
+      border: 1px solid black;
+    }
+    
+  
+  
+  
+  .total-productos{
+      
+      width: 130px;
+      height: 70px;
+      margin-top: 30px;
+      margin-left: 160px; 
+      color: #666;
+      font-family: 'Great Vibes', cursive;
+  }
+  .total-productos1{
+    
+    width: 150px;
+    height: 90px;
+    margin-top: 30px;
+    margin-left: 160px; 
+    color: #666;
+    font-family: 'Great Vibes', cursive;
+  }
+  
+  
+  .categorias{
+   
+      width: 150px;
+      height: 250px;
+      margin-left: 160px; 
+      font-family: 'Great Vibes', cursive;
+  
+  }
+  
+  
+  
+  h5{
+    color: black;
+  }
   
