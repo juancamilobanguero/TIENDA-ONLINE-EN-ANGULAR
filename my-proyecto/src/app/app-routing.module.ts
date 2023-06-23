@@ -6,15 +6,21 @@ import { HomeComponent } from './component/home/home.component';
 import { LaptosComponent } from './routes/laptos/laptos.component';
 import { MonitoresComponent } from './routes/monitores/monitores.component';
 import { CrearComponent } from './routes/crear/crear.component';
+import { IngresarComponent } from './routes/ingresar/ingresar.component';
+import { userGuard } from './guards/user/user.guard';
+import { adminGuard } from './guards/admin/admin.guard';
+import { AdminComponent } from './routes/admin/admin.component';
 
 const routes: Routes = [
   {path: "",pathMatch:"full",redirectTo:"/home"},
-  {path: "home", component: HomeComponent},
+  {path: "home", component: HomeComponent,canActivate:[userGuard]},
   { path:'gamers', component :GamersComponent},
   { path:'graficas', component :GraficasComponent},
   {path: 'laptos', component: LaptosComponent},
   {path: 'monitores',component:MonitoresComponent},
-  {path: 'crear',component:CrearComponent}
+  {path: 'crear',component:CrearComponent},
+  {path: 'ingresar',component:IngresarComponent},
+  {path: 'admin',component: AdminComponent,canActivate:[userGuard,adminGuard]}
 
 ];
 

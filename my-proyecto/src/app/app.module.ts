@@ -23,6 +23,8 @@ import { CartComponent } from './cart/cart.component';
 import { CrearComponent } from './routes/crear/crear.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import { IngresarComponent } from './routes/ingresar/ingresar.component';
+import { AdminComponent } from './routes/admin/admin.component';
 
 
 
@@ -47,6 +49,8 @@ import { FormsModule } from '@angular/forms';
     LaptosComponent,
     CartComponent,
     CrearComponent,
+    IngresarComponent,
+    AdminComponent,
   ],
   imports: [
     BrowserModule,
