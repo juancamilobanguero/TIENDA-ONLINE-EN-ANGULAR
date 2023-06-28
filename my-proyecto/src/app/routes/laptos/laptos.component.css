@@ -76,57 +76,21 @@ body{
   
   
   
-  .btn-compra{
-      display: inline-block;
-    padding: 10px 20px;
-    background-color: #4CAF50;
-    color: black;
-    border: none;
-    text-align: center;
-    text-decoration: none;
-    font-size: 16px;
-    border-radius: 5px;
-   
+ 
+  .container {
+    display: flex;
   }
   
-  .btn-compra:hover {
-      border: 1px solid black;
-    }
-    
-  
-  
-  
-  .total-productos{
-      
-      width: 130px;
-      height: 70px;
-      margin-top: 30px;
-      margin-left: 160px; 
-      color: #666;
-      font-family: 'Great Vibes', cursive;
+  .productos {
+    flex: 1;
+    padding-right: 20px;
   }
   
-  .total-productos1{
-    
-    width: 150px;
-    height: 90px;
-    margin-top: 30px;
-    margin-left: 160px; 
-    color: #666;
-    font-family: 'Great Vibes', cursive;
+  .cartas {
+    flex: 3;
+   margin-right: 20px;
+    padding-left: 20px;
   }
-  
-  
-  .categorias{
-   
-      width: 150px;
-      height: 250px;
-      margin-left: 160px; 
-      font-family: 'Great Vibes', cursive;
-  
-  }
-  
-  
   
   h5{
     color: black;

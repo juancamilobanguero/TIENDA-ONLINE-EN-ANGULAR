@@ -1,44 +1,12 @@
-<!-- <body>
-    <div class="box">
-        <span class="borderLine"></span>
-        <form #loginForm="ngForm"(ngSubmit)="loginForm">
-         <h2>Iniciar sesion</h2>
-         <div class="inputBox">
-             <input 
-             name="username"
-             #username="ngModel"
-             [(ngModel)]="userService.auth.username"
-             type="text"
-             id="staticEmail"
-             placeholder="Usuario"
-             >
-           
-         </div>
-         <div class="inputBox">
-             <input 
-             name="password"
-             #password="ngModel"
-             [(ngModel)]="userService.auth.username"
-             type="password"
-             id="inputPassword" 
-             placeholder="password">
-             >
-             
-             <i></i>
-         </div>
-         <div class="links">
-             <a href="#">Has olvidado tu contraseña</a>       
-         </div>
-         <input class="button" type="submit" value="login">
-      
-        </form>
-     </div>         
-</body> -->
-<div class="d-flex justify-content-center">
+
+   
+
+<div class="d-flex justify-content-center h-50">
     <div class="mt-5 border w-25 text-center p-5">
      <form #loginForm="ngForm" (ngSubmit)="login(loginForm)">
       <div class="mb-3 row">
         <div class="">
+            <h3>Iniciar sesion</h3>
           <input 
           name="username"
           #username= "ngModel"

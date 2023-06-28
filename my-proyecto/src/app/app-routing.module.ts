@@ -10,6 +10,8 @@ import { IngresarComponent } from './routes/ingresar/ingresar.component';
 import { userGuard } from './guards/user/user.guard';
 import { adminGuard } from './guards/admin/admin.guard';
 import { AdminComponent } from './routes/admin/admin.component';
+import { PromocionesComponent } from './routes/promociones/promociones.component';
+import { CarritoComponent } from './routes/carrito/carrito.component';
 
 const routes: Routes = [
   {path: "",pathMatch:"full",redirectTo:"/home"},
@@ -20,7 +22,9 @@ const routes: Routes = [
   {path: 'monitores',component:MonitoresComponent},
   {path: 'crear',component:CrearComponent},
   {path: 'ingresar',component:IngresarComponent},
-  {path: 'admin',component: AdminComponent,canActivate:[userGuard,adminGuard]}
+  {path: 'admin',component: AdminComponent,canActivate:[userGuard,adminGuard]},
+  {path: 'promociones', component:PromocionesComponent},
+  {path: 'carrito',component:CarritoComponent}
 
 ];
 

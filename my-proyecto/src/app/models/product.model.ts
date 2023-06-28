@@ -5,10 +5,10 @@ export class Product {
     name?: string;
     price?: number;
     stock?: number;
-    category?: any[];
+    category?: string;
     description?: string;
     _id?: string;
-    image?: string;
+    imagenes?: string;
     createdAt: any;
     updatedAt: any;
   static value: any;
@@ -18,7 +18,7 @@ export class Product {
       name = '',
       price = 0,
       stock = 0,
-      category = [],
+      category = "",
       description = '',
       _id = '',
       image = '',
@@ -32,7 +32,7 @@ export class Product {
       this.category = category;
       this.description = description;
       this._id = _id;
-      this.image = image;
+      this.imagenes = image;
       this.createdAt = createdAt;
       this.updatedAt = updatedAt;
     }

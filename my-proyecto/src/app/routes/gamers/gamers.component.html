@@ -25,9 +25,16 @@
         <br />
         <a>laptop</a>
         <br />
-        
       </div>
- 
+  </div>
+  <div>
+    <label>Precio mínimo:</label>
+<input type="number" [(ngModel)]="priceRange.min" class="price-input">
+
+<label>Precio máximo:</label>
+<input type="number" [(ngModel)]="priceRange.max" class="price-input">
+
+<button (click)="filterByPrice()" class="filter-button">Filtrar</button>
   </div>
   </div>
   <div class="col-md-8 d-flex flex-wrap">

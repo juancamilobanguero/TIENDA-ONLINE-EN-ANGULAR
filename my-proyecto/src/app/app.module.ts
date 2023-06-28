@@ -25,6 +25,9 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { IngresarComponent } from './routes/ingresar/ingresar.component';
 import { AdminComponent } from './routes/admin/admin.component';
+import { PromocionesComponent } from './routes/promociones/promociones.component';
+import { WhatsappButtonComponent } from './component/whatsapp-button/whatsapp-button.component';
+import { CarritoComponent } from './routes/carrito/carrito.component';
 
 
 
@@ -51,6 +54,9 @@ import { AdminComponent } from './routes/admin/admin.component';
     CrearComponent,
     IngresarComponent,
     AdminComponent,
+    PromocionesComponent,
+    WhatsappButtonComponent,
+    CarritoComponent,
   ],
   imports: [
     BrowserModule,

@@ -6,18 +6,28 @@ import { Product } from '../models/product.model';
 })
 export class CartService {
  
-  productos:any[]=[];
+  productos: any[] = [];
 
-  addToCart(producto: any){
+  constructor() {
+    // Cargar productos desde el Local Storage al iniciar el servicio
+    const productosGuardados = localStorage.getItem('carrito');
+    if (productosGuardados) {
+      this.productos = JSON.parse(productosGuardados);
+    }
+  }
+
+  agregarProducto(producto: any): void {
     this.productos.push(producto);
+    this.actualizarLocalStorage();
   }
 
-  removeFromCart(index:number){
-      this.productos.splice(index,1)
+  eliminarProducto(index: number): void {
+    this.productos.splice(index, 1);
+    this.actualizarLocalStorage();
   }
 
-  clearCart(){
-    this.productos = []
+  private actualizarLocalStorage(): void {
+    localStorage.setItem('carrito', JSON.stringify(this.productos));
   }
 
 }

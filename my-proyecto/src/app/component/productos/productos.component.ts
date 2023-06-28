@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { ProductService } from 'src/app/api/products/product.service';
 import { Product } from 'src/app/models/product.model';
+import { CartService } from 'src/app/api/cart.service';
 
 @Component({
   selector: 'app-productos',
@@ -58,6 +59,23 @@ export class ProductosComponent {
 
   updateProduct(product:Product ) {
     this.ProductService.productToCreate = product;
+  }
+  productos: any[] = [
+   
+  ];
+  guardarCambios(producto: any) {
+    let buyChart: any = eval(localStorage.getItem('buyChart')|| '[]') || []
+  
+    buyChart.push(producto)
+    console.log(buyChart)
+    localStorage.setItem('buyChart', JSON.stringify(buyChart))
+  }
+  
+  getLaptopProducts(category: string) {
+    this.ProductService.getLaptop(category).subscribe((data: any) => {
+      this.ProductService.getLaptop = data.result || [];
+      console.log(data);
+    });
   }
 }
 

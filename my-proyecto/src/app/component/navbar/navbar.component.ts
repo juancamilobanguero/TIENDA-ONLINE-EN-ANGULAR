@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { NavbarService } from './navbar.service';
 
 @Component({
   selector: 'app-navbar',
@@ -6,7 +7,15 @@ import { Component } from '@angular/core';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent {
-  mifuncion(){
-    console.log("hola")
+  tokenExisten = false;
+  constructor(private NavbarService: NavbarService){
+    this.tokenExisten=NavbarService.traertoken();
   }
+
+  eliminarToken(){
+    this.NavbarService.removeToken();
+    this.tokenExisten = this.NavbarService.traertoken();
+  }
+  
+  showDropdown = false;
 }

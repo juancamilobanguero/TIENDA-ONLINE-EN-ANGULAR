@@ -76,18 +76,7 @@ body{
 
 
 
-.btn-compra{
-    display: inline-block;
-  padding: 10px 20px;
-  background-color: #4CAF50;
-  color: black;
-  border: none;
-  text-align: center;
-  text-decoration: none;
-  font-size: 16px;
-  border-radius: 5px;
- 
-}
+
 
 .btn-compra:hover {
     border: 1px solid black;
@@ -100,8 +89,8 @@ body{
     
     width: 130px;
     height: 70px;
-    margin-top: 150px;
-    margin-left: 160px; 
+    margin-top: 50px;
+    margin-left: 110px; 
     color: #666;
     font-family: 'Great Vibes', cursive;
 }
@@ -110,19 +99,20 @@ body{
   
   width: 150px;
   height: 90px;
-  margin-top: 30px;
-  margin-left: 160px; 
+  margin-top: 50px;
+  margin-left: 110px; 
   color: #666;
-  font-family: 'Great Vibes', cursive;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 
 .categorias{
- 
+    
     width: 150px;
     height: 250px;
-    margin-left: 160px; 
-    font-family: 'Great Vibes', cursive;
+    margin-top: 50px;
+    margin-left: 110px; 
+    font-family: Arial, Helvetica, sans-serif;
 
 }
 
@@ -131,3 +121,28 @@ body{
 h5{
   color: black;
 }
+
+.price-input {
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+.filter-button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 8px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.filter-button:hover {
+  background-color: #45a049;
+}
+
+.filter-button:active {
+  background-color: #3e9045;
+}
+

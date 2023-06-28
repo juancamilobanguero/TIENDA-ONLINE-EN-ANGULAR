@@ -13,8 +13,12 @@ export class ProductService {
 
   constructor(private http:HttpClient) { }
 
-  getProducts(){
-    return this.http.get(`${this.urlApi}/product/getProducts`)
+  getProducts(category:string = ""){
+    return this.http.get(`${this.urlApi}/getProducts/${category}`)
+  }
+
+  getLaptop(category: string){
+    return this.http.get(`${this.urlApi}/getLaptop/${category}`)
   }
   
   createProduct(data: Product){

@@ -59,5 +59,12 @@ export class Produc2Component {
   updateProduct(product:Product ) {
     this.ProductService.productToCreate = product;
   }
+  guardarCambios(producto: any) {
+    let buyChart: any = eval(localStorage.getItem('buyChart')|| '[]') || []
+  
+    buyChart.push(producto)
+    console.log(buyChart)
+    localStorage.setItem('buyChart', JSON.stringify(buyChart))
+  }
 }
 

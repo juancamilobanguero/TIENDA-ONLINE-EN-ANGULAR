@@ -41,7 +41,7 @@ export class MonitoresComponent {
  }
 
  getAllProducts() {
-   this.ProductService.getProducts().subscribe((data: any) => {
+   this.ProductService.getProducts("monitores").subscribe((data: any) => {
      this.ProductService.allProducts = data.result || [];
      console.log(data);
    });
@@ -57,4 +57,11 @@ export class MonitoresComponent {
  updateProduct(product:Product ) {
    this.ProductService.productToCreate = product;
  }
+ guardarCambios(producto: any) {
+  let buyChart: any = eval(localStorage.getItem('buyChart')|| '[]') || []
+
+  buyChart.push(producto)
+  console.log(buyChart)
+  localStorage.setItem('buyChart', JSON.stringify(buyChart))
+}
 }

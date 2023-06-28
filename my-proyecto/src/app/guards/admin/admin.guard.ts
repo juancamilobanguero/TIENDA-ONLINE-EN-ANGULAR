@@ -12,5 +12,6 @@ export const adminGuard: CanActivateFn = (route, state) => {
   if (decoded && decoded.role === '1')return true
 
   router.navigate(['/home'])
+  
   return true;
 };

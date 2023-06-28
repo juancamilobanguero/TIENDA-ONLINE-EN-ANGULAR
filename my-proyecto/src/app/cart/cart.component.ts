@@ -10,14 +10,5 @@ import { ProductosComponent } from '../component/productos/productos.component';
 export class CartComponent {
  items:any[] = [];
 
- constructor(public cartService: CartService){
-  this.items = this.cartService.productos;
- }
-
- removeFromcart(producto:any){
-  this.cartService.removeFromCart(producto)
- }
- clearCart() {
-  this.cartService.clearCart();
-}
+ constructor(public cartService: CartService){}
 }

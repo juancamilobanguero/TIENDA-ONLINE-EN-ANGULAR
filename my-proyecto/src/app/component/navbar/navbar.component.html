@@ -1,5 +1,5 @@
-<div class="bg-dark d-flex justify-content-center ">
-  <input type="text" placeholder="buscar" />
+<div class="bg-dark d-flex justify-content-center pt-3">
+  <input type=" text " placeholder="buscar" />
   <div class="btn">
     <i class="fa-solid fa-magnifying-glass"></i>
   </div>
@@ -7,7 +7,7 @@
 
 <header class="header bg-dark ">
   <div class="logo">
-    <img src="../../../assets/img/los-10-sonidos-principales-del-perro.jpg" alt="" width="70px" height="50px" />
+   <a [routerLink]="['/home']" routerLinkActive="active"> <img src="/assets/img/image.png" alt="" width="70px" height="50px" /></a>
   </div>
   <nav>
     <ul class="nav-links">
@@ -41,8 +41,37 @@
     class="text-white text-decoration-none xse">
     Crear cuenta
   </a>
+  
+  <div *ngIf="tokenExisten">
     <a [routerLink]="['/ingresar']" routerLinkActive="active"
     class="text-white text-decoration-none xse">
-      Ingresa</a>
+      inicio de sesion</a>
+      <div class="navbar">
+        <div class="login" (mouseenter)="showDropdown = true" (mouseleave)="showDropdown = false">
+          <span>Iniciar sesión</span>
+          <div class="dropdown" *ngIf="showDropdown">
+            <div class="dropdown-content">
+              <div class="user-profile">
+                <img src="https://static.vecteezy.com/system/resources/thumbnails/008/442/086/small/illustration-of-human-icon-user-symbol-icon-modern-design-on-blank-background-free-vector.jpg" alt="Foto de perfil">
+              </div>
+              <a routerLink="/perfil">Perfil</a>
+              <button (click)="eliminarToken()">Salir</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div *ngIf="!tokenExisten">
+      <a [routerLink]="['/ingresar']" routerLinkActive="active"
+      class="text-white text-decoration-none xse">
+        no inicio sesion</a>
+      </div>
+     <div>
+      <a [routerLink]="['/carrito']" routerLinkActive="active"> 
+        
+        <img src="https://cdn-icons-png.flaticon.com/512/107/107831.png" alt="" width="50px" height="28px"/>
+       
+      </a>
+     </div>
   </div>
 </header>

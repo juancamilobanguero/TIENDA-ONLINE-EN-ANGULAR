@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { CartService } from 'src/app/api/cart.service';
 import { ProductService } from 'src/app/api/products/product.service';
 import { Product } from 'src/app/models/product.model';
-
+import { FormsModule } from '@angular/forms';
 @Component({
   selector: 'app-gamers',
   templateUrl: './gamers.component.html',
@@ -57,5 +57,9 @@ export class GamersComponent {
   updateProduct(product:Product ) {
     this.ProductService.productToCreate = product;
   }
+  filterByPrice() {
+    // Lógica de filtrado de precios
+  }
+  priceRange: { min: number, max: number } = { min: 0, max: 0 };
 }
 

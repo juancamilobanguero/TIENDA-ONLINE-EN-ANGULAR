@@ -1,32 +1,20 @@
-<h1 class="titulo m-4">OFERTAS</h1>
+<h1  class="m-3">Ofertas de semanticos</h1>
 <section class="contenedor">
-  <!-- Contenedor de elementos -->
-  <div class="contenedor-items">
-    <div class="item">
-      <span class="titulo-item">Tarjetas graficas</span>
-      <img
-        src="/assets/img/png-transparent-graphics-cards-video-adapters-rgb-backlit-gaming-high-end-graphics-card-geforce-gtx-1080ti-lightning-z-micro-star-international-digital-visual-interfa.png"
-        alt=""
-        class="img-item"
-      />
-      <span class="precio-item">$15.000</span>
-      <a href="#">informacion</a>
-      <button class="boton-item">Agregar al Carrito</button>
-    </div>
-
-    <div class="contenedor-items">
-      <div class="item">
-        <span class="titulo-item">Tarjetas graficas</span>
-        <img
-          src="/assets/img/png-transparent-graphics-cards-video-adapters-rgb-backlit-gaming-high-end-graphics-card-geforce-gtx-1080ti-lightning-z-micro-star-international-digital-visual-interfa.png"
-          alt=""
-          class="img-item"
-        />
-        <span class="precio-item">$15.000</span>
-        <a href="#">informacion</a>
-        <button class="boton-item">Agregar al Carrito</button>
-      </div>
+<div class="contenedor-items">
+  <div *ngFor="let number of [0,1,2,3]" class="item">
+    <!-- Tarjeta de producto -->
+    <div class="producto-card">
+      <h3>{{ this.ProductService.allProducts[number].name }}</h3>
+      <img [src]="this.ProductService.allProducts[number].imagenes" class="img-item" alt="">
+      <p>{{ this.ProductService.allProducts[number].description }}</p>
+      <span class="precio-item">{{this.ProductService.allProducts[number].price}}</span>
+  
+      <!-- Campos de entrada para editar los valores -->
+      <button (click)="guardarCambios(this.ProductService.allProducts[number])"class="boton-item">Agredar al carrito</button>
     </div>
   </div>
+</div>
 </section>
+
+
 

@@ -1,0 +1,12 @@
+<div *ngFor="let producto of this.cartService.productos" class="item">
+  <!-- Tarjeta de producto -->
+  <div class="producto-card">
+    <h3>{{ producto.name }}</h3>
+    <img [src]="producto.imagenes" class="img-item" alt="">
+    <p>{{ producto.description }}</p>
+    <span class="precio-item">{{producto.price | currency }}</span>
+
+    <!-- Campos de entrada para editar los valores -->
+    
+  </div>
+</div>
