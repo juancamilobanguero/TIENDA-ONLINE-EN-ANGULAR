@@ -132,13 +132,15 @@ body{
   
   .productos {
     flex: 1;
-    padding-right: 20px;
+    padding-top: 30px;
+    padding-right: 28px;
+    margin-top: 30px;
   }
   
   .cartas {
     flex: 3;
-   margin-right: 20px;
-    padding-left: 20px;
+   margin-right: 30px;
+    padding-left: 23px;
   }
   
   

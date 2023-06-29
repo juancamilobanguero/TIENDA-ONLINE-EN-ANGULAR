@@ -1,0 +1,98 @@
+body{
+    background-color: whitesmoke;
+  }
+  .ofertas a{
+    text-decoration: none;
+    color: rgb(140, 140, 140);
+  }
+  .camilo a{
+      text-decoration: none;
+      color: rgb(116, 116, 116);
+  }
+  /* .grafi{
+      width: 270px;
+      height: 30px;
+      border: 2rem solid #161616; 
+      margin: 10px;
+  } */
+  .contenedor{
+      max-width: 9000px;
+      padding: 10px;
+      margin: auto;
+      display: flex;
+      justify-content: space-between;
+      /* oculto lo que queda fuera del .contenedor */
+      contain: paint;
+   
+    }
+    .contenedor .contenedor-items{
+      margin-top: 30px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      grid-gap:30px;
+      grid-row-gap: 30px;
+      /* width: 60%; */
+      width: 100%;
+      transition: .3s;
+    }
+    .contenedor .contenedor-items .item{
+      max-width: 270px;
+      margin: auto;
+  
+      border-radius: 10px;
+      padding: 20px;
+      transition: .3s;
+      background-color: white;
+    }
+    .contenedor .contenedor-items .item .img-item{
+      width: 100%;
+    }
+    .contenedor .contenedor-items .item:hover{
+      box-shadow: 0 0 10px #666;
+      scale: 1.05;
+    }
+    .contenedor .contenedor-items .item .titulo-item{
+      display: block;
+      font-weight: bold;
+      text-align: center;
+      text-transform: uppercase;
+    }
+    .contenedor .contenedor-items .item .precio-item{
+      display: block;
+      text-align: center;
+      font-weight: bold;
+      font-size: 22px;
+    }
+    .contenedor .contenedor-items .item .boton-item{
+      display: block;
+      margin: 10px auto;
+      border: none;
+      background-color: black;
+      color: #fff;
+      padding: 5px 15px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  .container {
+    display: flex;
+  }
+  
+  .productos {
+    flex: 1;
+    margin-top: 30px;
+    padding-right: 20px;
+    padding-top: 30px;
+    text-decoration: none;
+  }
+  
+  .cartas {
+    flex: 3;
+   margin-right: 20px;
+    padding-left: 20px;
+  }
+  .promociones{
+    display: flex;
+    justify-content: center;
+    font-size: 35px;
+    margin-top: 10px;
+  }

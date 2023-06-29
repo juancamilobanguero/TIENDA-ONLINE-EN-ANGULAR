@@ -41,7 +41,7 @@ export class GamersComponent {
   }
 
   getAllProducts() {
-    this.ProductService.getProducts().subscribe((data: any) => {
+    this.ProductService.getProducts("gamers").subscribe((data: any) => {
       this.ProductService.allProducts = data.result || [];
       console.log(data);
     });
@@ -57,9 +57,12 @@ export class GamersComponent {
   updateProduct(product:Product ) {
     this.ProductService.productToCreate = product;
   }
-  filterByPrice() {
-    // Lógica de filtrado de precios
+  guardarCambios(producto: any) {
+    let buyChart: any = eval(localStorage.getItem('buyChart')|| '[]') || []
+  
+    buyChart.push(producto)
+    console.log(buyChart)
+    localStorage.setItem('buyChart', JSON.stringify(buyChart))
   }
-  priceRange: { min: number, max: number } = { min: 0, max: 0 };
 }
 

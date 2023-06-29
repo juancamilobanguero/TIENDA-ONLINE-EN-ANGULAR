@@ -2,12 +2,25 @@
   <div class="container">
     <div class="productos">
       <!-- Contenido de la lista de productos -->
+      <h5>Todas</h5>
+      <span>100 productos</span>
+      <h5>categorias</h5>
       <ul>
-        <li>Producto 1</li>
-        <li>Producto 2</li>
-        <li>Producto 3</li>
-        <!-- Agrega más productos según tus necesidades -->
+        <li>Lenovo ThinkPad X1 Carbon</li>
+        <li>MSI GS66 Stealth</li>
+        <li>HP Spectre x360</li>
+        <li>Dell XPS 15</li>
+        <li>Razer Blade 15</li>
+        <li>ASUS ROG Zephyrus G14</li>
+        <li>categorias</li>
       </ul>
+      <h5>costo de envio</h5>
+      <li>Gratis(9481)</li>
+      <h5>pago</h5>
+      <li>cuotas sin interes</li>
+      <h5>precio</h5>
+      <h6>hasta $200.000.00</h6>
+      <h6>$300.000.00 a 439.000.00</h6>
     </div>
     <div class="cartas">
       <section class="contenedor">
@@ -18,7 +31,7 @@
               <h3>{{ producto.name }}</h3>
               <img [src]="producto.imagenes" class="img-item" alt="">
               <p>{{ producto.description }}</p>
-              <span class="precio-item">{{producto.price}}</span>
+              <span class="precio-item">{{producto.price  | currency}}</span>
           
               <!-- Campos de entrada para editar los valores -->
               <button (click)="guardarCambios(producto)" class="boton-item">Agregar al carrito</button>
