@@ -7,7 +7,7 @@
 
 <header class="header bg-dark ">
   <div class="logo">
-   <a [routerLink]="['/home']" routerLinkActive="active"> <img src="/assets/img/image.png" alt="" width="70px" height="50px" /></a>
+   <a [routerLink]="['/home']" routerLinkActive="active"> <img src="/assets/img/image.png" alt="" width="100px"  /></a>
   </div>
   <nav>
     <ul class="nav-links">
@@ -36,7 +36,7 @@
       <!-- <li><a >Pc gamers</a></li> -->
     </ul>
   </nav>
-  <div class="d-flex gap-3 mb-3">
+  <div class="d-flex gap-3 mb-3" style="margin-top: 30px;" >
     <a [routerLink]="['/crear']" routerLinkActive="active"
     class="text-white text-decoration-none xse">
     Crear cuenta
@@ -64,12 +64,12 @@
     <div *ngIf="!tokenExisten">
       <a [routerLink]="['/ingresar']" routerLinkActive="active"
       class="text-white text-decoration-none xse">
-        no inicio sesion</a>
+        No inicio sesion</a>
       </div>
      <div>
       <a [routerLink]="['/carrito']" routerLinkActive="active"> 
         
-        <img src="https://cdn-icons-png.flaticon.com/512/107/107831.png" alt="" width="50px" height="28px"/>
+        <img src="https://cdn.icon-icons.com/icons2/1077/PNG/512/shoppingcart_77968.png" alt="" width="50px" />
        
       </a>
      </div>

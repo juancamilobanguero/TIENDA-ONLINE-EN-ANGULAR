@@ -44,7 +44,7 @@ export class ProductosComponent {
   }
 
   getAllProducts() {
-    this.ProductService.getProducts().subscribe((data: any) => {
+    this.ProductService.getProducts("productos").subscribe((data: any) => {
       this.ProductService.allProducts = data.result || [];
       console.log(data);
     });
