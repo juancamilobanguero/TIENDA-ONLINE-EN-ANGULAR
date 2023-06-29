@@ -8,7 +8,7 @@
         <h3>{{ this.ProductService.allProducts[number].name }}</h3>
         <img [src]="this.ProductService.allProducts[number].imagenes" class="img-item" alt="">
         <p>{{ this.ProductService.allProducts[number].description }}</p>
-        <span class="precio-item">{{this.ProductService.allProducts[number].price}}</span>
+        <span class="precio-item">{{this.ProductService.allProducts[number].price  | currency}}</span>
     
         <!-- Campos de entrada para editar los valores -->
         <button (click)="guardarCambios(this.ProductService.allProducts[number])"class="boton-item">Agredar al carrito</button>

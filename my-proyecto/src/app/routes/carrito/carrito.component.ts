@@ -8,7 +8,10 @@ import { ProductosComponent } from 'src/app/component/productos/productos.compon
   styleUrls: ['./carrito.component.css']
 })
 export class CarritoComponent {
-  productos: any[] = [];
+  productos: any[] = [
+    
+  ];
+ 
 
   constructor(public cartService:CartService) { }
 
@@ -18,5 +21,19 @@ export class CarritoComponent {
     console.log(this.productos, localStorage.getItem('buyChart'))
   }
 
-  
+  removeFromCart(index: number) {
+    this.cartService.eliminarProducto(index);
+  }
+  calcularTotal(): number {
+    let total = 0;
+
+    for (let producto of this.productos) {
+      total += producto.precio;
+    }
+
+    return total;
+  }
 }
+
+  
+  

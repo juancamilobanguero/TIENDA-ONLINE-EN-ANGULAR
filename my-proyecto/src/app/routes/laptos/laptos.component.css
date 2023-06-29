@@ -83,7 +83,9 @@ body{
   
   .productos {
     flex: 1;
+    padding-top: 30px;
     padding-right: 20px;
+    margin-top: 30px;
   }
   
   .cartas {
